@@ -20,8 +20,9 @@ function App() {
 
   const deleteTodoHandler = (delTodo) => {
     setTodoList((prev) => {
-      localStorage.setItem("todoArr", JSON.stringify([...prev.filter((a) => a !== delTodo)]));
-      prev.filter((a) => a !== delTodo);
+      const delArr = prev.filter((a) => a !== delTodo);
+      localStorage.setItem("todoArr", JSON.stringify(delArr));
+      return delArr;
     });
     
   };
