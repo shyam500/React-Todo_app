@@ -14,7 +14,6 @@ function App() {
 
   const addTodoFunc = (todo) => {
     setTodoList([...todoList, todo]);
-    console.log(todoList);
     localStorage.setItem("todoArr", JSON.stringify([...todoList]));
   };
 
