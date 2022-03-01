@@ -15,7 +15,7 @@ const TodoList = (props) => {
     </li>
   ));
 
-  return <ul>{todos}</ul>;
+  return <ul className={classes.listContainer}>{todos}</ul>;
 };
 
 export default TodoList;

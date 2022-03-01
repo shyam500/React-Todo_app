@@ -3,7 +3,7 @@
   --text_col:rgb(231, 229, 229);
   --hover_col:rgb(8, 96, 184);
 }
-
+ 
 .form {
  margin: auto;
  height: 150px;
@@ -12,7 +12,7 @@
  align-items: center;
  justify-content: center;
  position: fixed;
- bottom: 50px;
+ bottom: 10px;
 }
 
 .form > button,.form > input {
@@ -32,7 +32,7 @@
 
 .form > input {
   background-color: rgba(30, 144, 255,0.5);
-  color: rgb(52, 53, 53);
+  color: rgb(207, 206, 206);
 }
 
 .form > input:focus {
