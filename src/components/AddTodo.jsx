@@ -1,9 +1,8 @@
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 import "./AddTodo.css";
 
 const AddTodo = (props) => {
-
-  const[todo,setTodo]=useState('');
+  const [todo, setTodo] = useState("");
   const { addTodo } = props;
   const [visible, setVisible] = useState(false);
 
@@ -11,7 +10,7 @@ const AddTodo = (props) => {
     setVisible(true);
   };
 
-  const todoHandler = (e)=>{
+  const todoHandler = (e) => {
     setTodo(e.target.value);
   };
 
@@ -19,6 +18,10 @@ const AddTodo = (props) => {
     e.preventDefault();
     setVisible(false);
     addTodo(todo);
+  };
+
+  const blurHandler =()=>{
+    setVisible(false);
   };
 
   return (
@@ -29,8 +32,14 @@ const AddTodo = (props) => {
         </button>
       )}
 
-      {visible && <input type="text" placeholder="Enter Todo..." onChange={todoHandler}></input>}
-
+      {visible && (
+        <input
+          type="text"
+          placeholder="Enter Todo..."
+          onChange={todoHandler}
+          onBlur={blurHandler}
+        ></input>
+      )}
     </form>
   );
 };

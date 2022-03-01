@@ -23,12 +23,11 @@ function App() {
       localStorage.setItem("todoArr", JSON.stringify(delArr));
       return delArr;
     });
-    
   };
 
   return (
     <div className="App">
-      <TodoList list={todoList} delTodoFunc={deleteTodoHandler} />
+      <TodoList list={todoList} delTodoFunc={deleteTodoHandler}/>
       <AddTodo addTodo={addTodoFunc} />
     </div>
   );
