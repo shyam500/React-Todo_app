@@ -1,0 +1,40 @@
+:root{
+  --theme_col:dodgerblue;
+  --text_col:rgb(231, 229, 229);
+  --hover_col:rgb(8, 96, 184);
+}
+
+.form {
+ margin: auto;
+ height: 150px;
+ width: 90vw;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ position: fixed;
+ bottom: 50px;
+}
+
+.form > button,.form > input {
+    width: 80%;
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.2rem;
+    font:normal normal 1.2rem 'poppins';
+    border: none;
+    background-color: var(--theme_col);
+    color: var(--text_col);
+    transition: 0.4s linear;
+}
+
+.form > button:hover{
+    background-color: var(--hover_col);
+}
+
+.form > input {
+  background-color: rgba(30, 144, 255,0.5);
+  color: rgb(52, 53, 53);
+}
+
+.form > input:focus {
+  outline: none;
+}

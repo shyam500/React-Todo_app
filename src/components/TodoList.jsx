@@ -1,4 +1,4 @@
-import "./TodoList.css";
+import classes  from "./TodoList.module.css";
 import bin from 'E:/projects/Todo_app/icons/bin.png';
 
 const TodoList = (props) => {

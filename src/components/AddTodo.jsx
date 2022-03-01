@@ -1,5 +1,5 @@
-import { useState, forwardRef } from "react";
-import "./AddTodo.css";
+import { useState} from "react";
+import classes from "./AddTodo.module.css";
 
 const AddTodo = (props) => {
   const [todo, setTodo] = useState("");
@@ -25,17 +25,17 @@ const AddTodo = (props) => {
   };
 
   return (
-    <form onSubmit={formSubmitHandler}>
+    <form onSubmit={formSubmitHandler} className={classes.form}>
       {!visible && (
         <button type="button" onClick={changeVisibilityHandler}>
-          <span>+</span> Add Todo
+           Add Todo
         </button>
       )}
 
       {visible && (
         <input
           type="text"
-          placeholder="Enter Todo..."
+          placeholder="Add Todo..."
           onChange={todoHandler}
           onBlur={blurHandler}
         ></input>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./App.css";
+import classes from "./App.module.css";
 import AddTodo from "./components/AddTodo";
 import TodoList from "./components/TodoList";
 
@@ -26,7 +26,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className={classes.App}>
       <TodoList list={todoList} delTodoFunc={deleteTodoHandler}/>
       <AddTodo addTodo={addTodoFunc} />
     </div>
