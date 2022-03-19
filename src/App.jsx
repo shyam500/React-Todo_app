@@ -4,18 +4,25 @@ import AddTodo from "./components/AddTodo";
 import TodoList from "./components/TodoList";
 
 function App() {
-  const [todoList, setTodoList] = useState([]);
-
   useEffect(() => {
     if (localStorage.getItem("todoArr")) {
       setTodoList(JSON.parse(localStorage.getItem("todoArr")));
     }
   }, []);
 
+  const [todoList, setTodoList] = useState(
+    localStorage.getItem("todoArr")
+      ? JSON.parse(localStorage.getItem("todoArr"))
+      : []
+  );
+
   const addTodoFunc = (todo) => {
-    setTodoList([...todoList, todo]);
-    localStorage.setItem("todoArr", JSON.stringify([...todoList]));
+    setTodoList((prev) => [...prev, todo]);
   };
+
+  useEffect(() => {
+    localStorage.setItem("todoArr", JSON.stringify([...todoList]));
+  }, [todoList]);
 
   const deleteTodoHandler = (delTodo) => {
     setTodoList((prev) => {
@@ -27,7 +34,7 @@ function App() {
 
   return (
     <div className={classes.App}>
-      <TodoList list={todoList} delTodoFunc={deleteTodoHandler}/>
+      <TodoList list={todoList} delTodoFunc={deleteTodoHandler} />
       <AddTodo addTodo={addTodoFunc} />
     </div>
   );

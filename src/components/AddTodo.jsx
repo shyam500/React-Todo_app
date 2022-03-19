@@ -19,7 +19,7 @@ const AddTodo = (props) => {
     setVisible(false);
     addTodo(todo);
   };
-
+ 
   const blurHandler =()=>{
     setVisible(false);
   };

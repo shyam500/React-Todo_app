@@ -6,6 +6,11 @@
   list-style: none;
 }
 
+h2{
+  color:rgb(193, 194, 194);
+  font-size: 1.2rem;
+}
+
 .listContainer > li {
   padding: 0.6rem;
   margin: 1rem 1.6rem;
@@ -19,6 +24,7 @@
     position: absolute;
     right: 0px;
 }   
+
 
 @media screen and (max-width:300px) {
   .listContainer > li {

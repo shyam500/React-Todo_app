@@ -24,10 +24,12 @@
     background-color: var(--theme_col);
     color: var(--text_col);
     transition: 0.4s linear;
+    animation: btnAnim 10s linear 1s;
 }
 
 .form > button:hover{
     background-color: var(--hover_col);
+
 }
 
 .form > input {
